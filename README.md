@@ -13,8 +13,8 @@ It also adds functions for reading and setting these values:
   - err   - indicate that an error occurred, specify its number and text if necessary, and throw an exception. returns FALSE when called 
 
 The main purpose is to handle predictable, not exception, erroneous situations, such as:
-  - checking data
-  - return the execution status of the function (reading file data, verify the existence of object, etc.)
+1. checking data
+2. return the execution status of the function (reading file data, verify the existence of object, etc.)
 
 Examples of use:
 1. The user opens the file verifying that the file type is not supported — return FALSE and retain the error data
@@ -37,8 +37,8 @@ Trait ErrorMessage добавляет классу два поля:
   err  - указывает, что произошла ошибка, при необходимости, можно указать ее номер и текст, а также выдачу исключения. Возвращает при вызове FALSE
 
 Основная цель состоит в том, чтобы справиться с предсказуемыми ошибочными ситуациями, а не исключениями, такими как:
-- проверка данных
-- возврат статуса выполнения функции (чтение данных файла, проверка наличия объекта и т.д.)
+1. проверка данных
+2. возврат статуса выполнения функции (чтение данных файла, проверка наличия объекта и т.д.)
 
 Пример использования:
 1. Пользователь открывает файл, проверяя, что тип файла не поддерживается — возвращает FALSE и сохраняет данные об ошибке
