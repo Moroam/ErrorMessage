@@ -7,14 +7,14 @@ Trait ErrorMessage adds two fields to the class:
   $error - text of the error message 
   $errno - error number 
 
-It also adds functions for reading and setting these values: 
-  __get - reading error and errno 
-  ok    - indicates that there is no error at the moment, returns TRUE when called 
+It also adds functions for reading and setting these values:
+  __get - reading error and errno
+  ok    - indicates that there is no error at the moment, returns TRUE when called
   err   - indicate that an error occurred, specify its number and text if necessary, and throw an exception. returns FALSE when called 
 
 The main purpose is to handle predictable, not exception, erroneous situations, such as:
-- checking data
-- return the execution status of the function (reading file data, verify the existence of object, etc.)
+  - checking data
+  - return the execution status of the function (reading file data, verify the existence of object, etc.)
 
 Examples of use:
 1. The user opens the file verifying that the file type is not supported — return FALSE and retain the error data
@@ -27,13 +27,13 @@ Examples of use:
 
 Как это работает?
 
-Trait ErrorMessage добавляет классу два поля: 
-  $error - текст сообщения об ошибке 
+Trait ErrorMessage добавляет классу два поля:
+  $error - текст сообщения об ошибке
   $errno - номер ошибки 
 
-Он также добавляет функции для чтения и установки этих значений: 
-  _get - получение текста и кода ошибки 
-  ok   - указывает, что в данный момент ошибки нет, возвращает при вызове TRUE 
+Он также добавляет функции для чтения и установки этих значений:
+  _get - получение текста и кода ошибки
+  ok   - указывает, что в данный момент ошибки нет, возвращает при вызове TRUE
   err  - указывает, что произошла ошибка, при необходимости, можно указать ее номер и текст, а также выдачу исключения. Возвращает при вызове FALSE
 
 Основная цель состоит в том, чтобы справиться с предсказуемыми ошибочными ситуациями, а не исключениями, такими как:
